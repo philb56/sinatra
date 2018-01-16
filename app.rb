@@ -7,8 +7,10 @@ end
 get '/alex' do
   '<H1>Hello Alex</H1>'
 end
-get '/named-cat' do
-  p params
+get '/catForm' do
+  erb(:catForm)
+end
+post '/named-cat' do
   @name=params[:name]
   erb(:index)
 end
